@@ -10,7 +10,7 @@ class Plant:
     def grow(self, amount):
         self._height = round(self._height + float(amount), 1)
 
-    def age(self):
+    def age_one_day(self):
         self._age += 1
 
     def show(self):
@@ -59,7 +59,7 @@ class Vegetable(Plant):
     def grow_and_age(self, days):
         for _ in range(days):
             self.grow(2.1)
-            self.age()
+            self.age_one_day()
             self.nutritional_value += 1
 
     def show(self):
